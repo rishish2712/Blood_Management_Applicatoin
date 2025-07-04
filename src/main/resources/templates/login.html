@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login - MyApp</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+	<!-- Login Page -->
+	<div class="login-container" id="loginPage">
+	    <div class="login-header">
+	        <div class="logo">
+	            <i class="fas fa-heartbeat"></i>
+	            <h1>BloodLife</h1>
+	        </div>
+	        <p>Blood Management System</p>
+	    </div>
+	    
+	    <div class="login-body">
+	        <div class="form-group">
+	            <label for="username">Username</label>
+	            <input type="text" id="username" placeholder="Enter your username">
+	        </div>
+	        
+	        <div class="form-group">
+	            <label for="password">Password</label>
+	            <input type="password" id="password" placeholder="Enter your password">
+	        </div>
+	        
+	        <button class="login-btn" id="loginButton">
+	            <i class="fas fa-sign-in-alt"></i> Login to Dashboard
+	        </button>
+	    </div>
+	    
+	    <div class="login-footer">
+	        <p>Don't have an account? <a href="#">Contact administrator</a></p>
+	    </div>
+	</div>
+        <div class="divider"><span>OR</span></div>
+
+        <!-- Google OAuth Login -->
+        <div class="social-login">
+            <a th:href="@{/oauth2/authorization/google}" class="btn btn-google">
+                <i class="fab fa-google"></i> Login with Google
+            </a>
+        </div>
+
+        <p class="signup-text">Don't have an account? <a href="#" th:href="@{/register}">Sign up</a></p>
+    </div>
+</body>
+
+</html>
